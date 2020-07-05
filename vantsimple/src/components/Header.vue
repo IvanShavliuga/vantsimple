@@ -60,28 +60,26 @@
 </template>
 
 <script>
+import { Tabbar, TabbarItem } from 'vant'
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: "Header",
+  components: {
+    [Tabbar.name]: Tabbar,
+    [TabbarItem.name]: TabbarItem
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+<style scoped lang="less">
+
+.header {
+  height: 300px;
+  padding: 50px auto;
+  background: #454398;
+  &__title {
+    color: @grey;
+    font-size: 20px;
+  }
 }
 </style>
