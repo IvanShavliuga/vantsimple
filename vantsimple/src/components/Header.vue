@@ -1,71 +1,14 @@
 <template>
   <header class="header">
     <h1 class="header__title">Resume</h1>
+    <img class="header__image" src="../assets/images/Login_1.svg"/>
 
-  <van-tabbar
-   class="header__navbar"
-   route
-   active-color="#fa7268"
-   :safe-area-inset-bottom="true"
- >
-   <van-tabbar-item
-     to="/home"
-     :replace="true"
-     class="header__navbar__item"
-   >
-     <van-icon
-       class-prefix="i"
-       name="home"
-       class="header__navbar__icon iconfont"
-       slot="icon"
-     />
-     <span>Home</span>
-   </van-tabbar-item>
-   <van-tabbar-item
-     to="/store"
-     :replace="true"
-     class="header__navbar__item"
-   >
-     <van-icon
-       class-prefix="i"
-       name="store"
-       class="header__navbar__icon iconfont"
-       slot="icon"
-     />
-     <span>Store</span>
-   </van-tabbar-item>
-   <van-tabbar-item
-     to="/transport"
-     :replace="true"
-     class="header__navbar__item"
-   >
-     <van-icon
-       class-prefix="i"
-       name="l"
-       class="header__navbar__icon iconfont"
-       slot="icon"
-     />
-     <span>Update</span>
-   </van-tabbar-item>
-   <van-tabbar-item
-     to="/mine"
-     :replace="true"
-     class="header__navbar__item"
-   >
-     <van-icon
-       class-prefix="i"
-       name="mine"
-       class="header__navbar__icon iconfont"
-       slot="icon"
-     />
-     <span>User</span>
-   </van-tabbar-item>
- </van-tabbar>
 </header>
 </template>
 
 <script>
 import { Tabbar, TabbarItem } from 'vant'
+
 export default {
   name: "Header",
   components: {
@@ -79,11 +22,11 @@ export default {
 <style scoped lang="less">
 
 .header {
-  height: 300px;
+  height: 1vhmax;
   margin:0;
   margin-top:-15px;
   padding: 50px;
-  background: #454398;
+  background: @headerbackgroundcolor;
   &__navbar {
     display:flex;
     width:300px;
@@ -97,8 +40,13 @@ export default {
     }
   }
   &__title {
-    color: @grey;
-    font-size: 40px;
+    color: @headercolor;
+    font-size: 45px;
+  }
+  &__image {
+    width:450px;
+    height:450px;
+    margin-left:40px;
   }
 }
 </style>
