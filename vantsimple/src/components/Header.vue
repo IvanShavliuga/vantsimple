@@ -8,7 +8,8 @@
           <h2 class="header__prof">junior Frontend developer</h2>
           <p class="header__desc">Верстка сайтов под заказ</p>
           <p class="header__phone">+375-44-563-84-23</p>
-          <van-button type="primary">Primary</van-button>
+          <van-button class="header__button" type="primary">Оформить заказ</van-button>
+          <navbar/>
         </div>
       </div>
     </div>
@@ -17,12 +18,13 @@
 
 <script>
 import { Tabbar, TabbarItem} from 'vant'
-
+import Navbar from './Navbar.vue'
 export default {
   name: "Header",
   components: {
     [Tabbar.name]: Tabbar,
-    [TabbarItem.name]: TabbarItem
+    [TabbarItem.name]: TabbarItem,
+    Navbar
   }
 }
 </script>
@@ -91,6 +93,20 @@ export default {
     color:#edd923;
     font-size:25px;
     font-style:italic;
+  }
+  &__button {
+    font-size:25px;
+    background-color:transparent;
+    padding:5px 25px;
+    border:1px solid @headerbuttoncolor;
+    border-radius:15px;
+    color:@headerbuttoncolor;
+    box-shadow:1px 1px 8px @headerbuttoncolor;
+    &:hover {
+      background-color:darken(@headerhovercolor,40%);
+      color:@headercolor;
+      border:1px solid darken(@headerhovercolor,40%);
+    }
   }
 }
 </style>

@@ -10,26 +10,36 @@
      :replace="true"
      class="header__navbar__item"
    >
+     <a
+       href="http://youtube.com"
+       target="blank"
+       class="header__navbar__icon"
+     >
      <van-icon
        class-prefix="i"
        name="home"
-       class="header__navbar__icon iconfont"
+       class="icon-youtube"
        slot="icon"
      />
-     <span>Home</span>
+    </a>
    </van-tabbar-item>
    <van-tabbar-item
      to="/store"
      :replace="true"
      class="header__navbar__item"
    >
+     <a
+       href="http://github.com"
+       target="blank"
+       class="header__navbar__icon"
+     >
      <van-icon
        class-prefix="i"
        name="store"
-       class="header__navbar__icon iconfont"
+       class="icon-github"
        slot="icon"
      />
-     <span>Store</span>
+     </a>
    </van-tabbar-item>
    <van-tabbar-item
      to="/transport"
@@ -56,6 +66,7 @@
        slot="icon"
      />
      <span>User</span>
+
    </van-tabbar-item>
  </van-tabbar>
 </template>
@@ -69,3 +80,23 @@ export default {
   }
 }
 </script>
+<style scoped lang="less">
+.header {
+  &__navbar {
+    display:flex;
+    width:300px;
+    margin-top:20px;
+    &__item {
+      color:@navbar;
+      width:100px;
+    }
+    &__icon {
+      font-size:30px;
+      text-align:center;
+      color:@headerbuttoncolor;
+      text-decoration:none;
+    }
+  }
+
+}
+</style>
