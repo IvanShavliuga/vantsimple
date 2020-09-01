@@ -7,7 +7,7 @@
           <h1 class="header__name">Ivan Ivanov Shavliuga</h1>
           <h2 class="header__prof">junior Frontend developer</h2>
           <p class="header__desc">Верстка сайтов под заказ</p>
-          <p class="header__phone">+375-44-563-84-23</p>
+          <p class="header__phone">+375----23</p>
           <van-button class="header__button" type="primary">Оформить заказ</van-button>
           <navbar/>
         </div>
